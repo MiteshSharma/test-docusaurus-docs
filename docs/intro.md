@@ -7,6 +7,7 @@ keywords:
   - Rest engine
 sidebar_label: Tutorial Intro
 sidebar_position: 1
+slug: /
 ---
 
 # Tutorial Intro

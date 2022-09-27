@@ -71,6 +71,11 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {
+            href: 'https://github.com/MiteshSharma/test-docusaurus-docs',
+            position: 'right',
+            className: 'header-github-link',
+          },
         ],
       },
       footer: {
@@ -117,6 +122,13 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        appId: 'API_ID',
+        apiKey: 'TEST_KEY',
+        indexName: 'docs',
+        contextualSearch: true,
+        searchParameters: {},
       },
     }),
 };
