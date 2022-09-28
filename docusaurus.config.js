@@ -1,3 +1,36 @@
+/**
+ * @type {import('redocusaurus').PresetEntry}
+ */
+ const redocusaurus = [
+  'redocusaurus',
+  {
+    debug: Boolean(process.env.DEBUG || process.env.CI),
+    specs: [
+      {
+        id: 'using-swagger-yaml',
+        spec: 'swagger/swagger.yaml',
+        route: '/api',
+      },
+    ],
+    theme: {
+      /**
+       * Highlight color for docs
+       */
+      primaryColor: '#1890ff',
+      /**
+       * Options to pass to redoc
+       * @see https://github.com/redocly/redoc#redoc-options-object
+       */
+      options: { disableSearch: true },
+      /**
+       * Options to pass to override RedocThemeObject
+       * @see https://github.com/Redocly/redoc#redoc-theme-object
+       */
+      theme: {},
+    },
+  },
+];
+
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -51,6 +84,8 @@ const config = {
         },
       }),
     ],
+    // Redocusaurus Config
+    redocusaurus,
   ],
 
   themeConfig:
@@ -75,6 +110,11 @@ const config = {
             href: 'https://github.com/MiteshSharma/test-docusaurus-docs',
             position: 'right',
             className: 'header-github-link',
+          },
+          {
+            to: "/api/",
+            label: "API",
+            position: "left",
           },
         ],
       },
